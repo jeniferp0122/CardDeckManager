@@ -1,0 +1,43 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+    text-align: left;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  mat-dialog-content {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    display: block;
+    padding-bottom: 16px; 
+  }
+  
+  mat-dialog-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-top: 1px solid #ddd;
+    background-color: white;
+    /* If you want sticky actions, you can try uncommenting these lines.
+       If scrolling doesn't reach the bottom, leave these commented out.
+    
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    */
+  }
+  

@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Dealt Cards History</h1>
+<mat-dialog-content>
+  <div *ngIf="data.cards.length > 0; else emptyHistory">
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Suit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let card of data.cards">
+          <td>{{ card.rank }}</td>
+          <td>{{ card.suit }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #emptyHistory>
+    <p>No cards have been dealt yet.</p>
+  </ng-template>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button color="warn" (click)="clearHistory()">Clear History</button>
+  <button mat-button (click)="close()">Close</button>
+</mat-dialog-actions>
+
